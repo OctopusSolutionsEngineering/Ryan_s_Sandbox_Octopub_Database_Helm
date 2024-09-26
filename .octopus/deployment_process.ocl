@@ -240,7 +240,7 @@ step "mysql-create-database-if-not-exists" {
                     	Close-SqlConnection -ConnectionName $connectionName
                     }
                 }
-                EOT
+                    EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
         }
@@ -849,7 +849,7 @@ step "flyway-database-migrations" {
                 {
                   	New-OctopusArtifact -Path $reportFile -Name "$($flywayStepName)_$($flywayEnvironment)_$($currentDateFormatted)_report.html"
                 }
-                EOT
+                    EOT
             Octopus.Action.Script.ScriptSource = "Inline"
             Octopus.Action.Script.Syntax = "PowerShell"
             OctopusUseBundledTooling = "False"
